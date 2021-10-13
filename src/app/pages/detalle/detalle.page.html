@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngIf="persona">
+      <ion-input type="text" [(ngModel)]="persona.apellido"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="persona">
+      <ion-input type="text" [(ngModel)]="persona.nombre"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="full" (click)="actualizar()">Actualizar</ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="eliminar()">
+      <ion-icon name="Trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
